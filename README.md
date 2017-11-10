@@ -27,65 +27,44 @@ Ex:
 
 After joining the multicast group 239.254.0.1 and listening to OSC messages on port 3090.
 Introduce yourself:
-/messenger/me/introduce = <string: client OSC UID>, <string: user name>, <string: application name>
+- /messenger/me/introduce = <string: client OSC UID>, <string: user name>, <string: application name>
 
 All clients will reply with:
-/messenger/me/welcome = <string: client OSC UID>, <string: user name>, <string: application name>
+- /messenger/me/welcome = <string: client OSC UID>, <string: user name>, <string: application name>
 
 
 ## Integrating Your App: Step 2 – Rooms:
 
 When entering a room:
-/messenger/me/room/<string: room name>/enter= <string: client OSC UID>, <string: user name>, <string: application name>
+- /messenger/me/room/<string: room name>/enter= <string: client OSC UID>, <string: user name>, <string: application name>
 
 When exiting a room:
-/messenger/me/room/<string: room name>/exit = <string: client OSC UID>, <string: user name>, <string: application name>
+- /messenger/me/room/<string: room name>/exit = <string: client OSC UID>, <string: user name>, <string: application name>
 
 To query who is listening outside of a room:
-/messenger/who/listening = <string: room name>
+- /messenger/who/listening = <string: room name>
 
 All clients listening outside of a room will reply with:
-/messenger/me/listening = <string: client OSC UID>, <string: user name>, <string: application name>
+- /messenger/me/listening = <string: client OSC UID>, <string: user name>, <string: application name>
 
 To query who is listening within a room:
-/messenger/who/listening/room = <string: room name>
+- /messenger/who/listening/room = <string: room name>
 
 All clients listening within the room will reply with:
-/messenger/me/listening/room/<string: room name> = <string: client OSC UID>, <string: user name>, <string: application name>
+- /messenger/me/listening/room/<string: room name> = <string: client OSC UID>, <string: user name>, <string: application name>
 
 
 ## Integrating Your App: Step 3 – Sending a message:
 
 Sending a message outside of a room:
-/messenger/me/say = <string: message OSC UID> <string: client OSC UID>, <string: message>
+- /messenger/me/say = <string: message OSC UID> <string: client OSC UID>, <string: message>
 
 Send a message within a room:
-/messenger/me/room/<room name>/say = <string: message OSC UID> <string: client OSC UID>, <string: message>
+- /messenger/me/room/<room name>/say = <string: message OSC UID> <string: client OSC UID>, <string: message>
 
 
 ## Integrating Your App: Step 4 – Farewell:
 
 On a client’s departure from messenger, they should declare they are leaving with:
-/messenger/me/farewell = <string: client OSC UID>, <string: user name>, <string: application name>
+- /messenger/me/farewell = <string: client OSC UID>, <string: user name>, <string: application name>
 
-Address Pattern Tree:
-
-/messenger:
-  /messenger/me:				
-		/messenger/me/introduce			
-		/messenger/me/welcome
-    /messenger/me/say
-    /messenger/me/room:							
-		  /messenger/me/room/say		
-	  /messenger/me/listening:				
-      /messenger/me/listening/room
-    /messenger/me/read				
-    /messenger/me/said				
-    /messenger/me/who				
-    /messenger/me/farewell
-  /messenger/who:
-    /messenger/who/listening:
-      /messenger/who/listening/room
-    /messenger/who/read
-    /messenger/who/said
-    /messenger/who/you
