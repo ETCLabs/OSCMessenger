@@ -13,7 +13,7 @@ OSC Arguments will be specified in one of the following formats:
 <OSC Argument Type: Description>
 <OSC Argument Type: Example>
 
-OSC UUID:
+# OSC UUID:
 
 UUID’s uniquely identify each messenger client and message, and should be preserved within each client’s database. This allows you to uniquely identify who the message is coming from as well as which message you are referring to.
 
@@ -23,7 +23,7 @@ XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Ex:
 “B0BAE0A0-3BBE-4004-888B-F61CA125D0B0”
 
-Integrating Your App: Step 1 – Introductions:
+# Integrating Your App: Step 1 – Introductions:
 
 After joining the multicast group 239.254.0.1 and listening to OSC messages on port 3090.
 Introduce yourself:
@@ -33,7 +33,7 @@ All clients will reply with:
 /messenger/me/welcome = <string: client OSC UID>, <string: user name>, <string: application name>
 
 
-Integrating Your App: Step 2 – Rooms:
+# Integrating Your App: Step 2 – Rooms:
 
 When entering a room:
 /messenger/me/room/<string: room name>/enter= <string: client OSC UID>, <string: user name>, <string: application name>
@@ -54,7 +54,7 @@ All clients listening within the room will reply with:
 /messenger/me/listening/room/<string: room name> = <string: client OSC UID>, <string: user name>, <string: application name>
 
 
-Integrating Your App: Step 3 – Sending a message:
+# Integrating Your App: Step 3 – Sending a message:
 
 Sending a message outside of a room:
 /messenger/me/say = <string: message OSC UID> <string: client OSC UID>, <string: message>
@@ -63,7 +63,7 @@ Send a message within a room:
 /messenger/me/room/<room name>/say = <string: message OSC UID> <string: client OSC UID>, <string: message>
 
 
-Integrating Your App: Step 4 – Farewell:
+# Integrating Your App: Step 4 – Farewell:
 
 On a client’s departure from messenger, they should declare they are leaving with:
 /messenger/me/farewell = <string: client OSC UID>, <string: user name>, <string: application name>
