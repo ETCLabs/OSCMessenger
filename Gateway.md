@@ -1,4 +1,5 @@
-# Gateway: *Optional Implementation*
+# Gateway: 
+<*Optional Implementation*>
 
 In most instances of OSC Messenger multicasting as a medium of distributing messages works out well. One shortcoming though is that routing multicast packets comes at great financial expense. To alleviate the pain we offer a solution where by a client can be a gateway and forward between unicast and multicast in both directions. 
 All gateway messages are sent via a unicast UDP or TCP channel. TCP is recommended. 
