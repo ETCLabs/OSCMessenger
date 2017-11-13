@@ -7,7 +7,7 @@ All clients acting as OSC Messenger gateways, otherwise known as “Gateways”,
 Any client may act as an OSC Messenger gateway for a number of unicasting Clients, known as “Patrons” and receive gateway messages on an ephemeral port.
 
 
-##  Integrating Your App with a Gateway: Step 1 – Request a Gateway:
+## Integrating Your App with a Gateway: Step 1 – Request a Gateway:
 
 The patron will request another client to be a gateway for it via a unicast channel:
 /messenger/gateway/me/request = <string: patron OSC UID>
