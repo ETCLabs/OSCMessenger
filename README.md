@@ -12,6 +12,7 @@ All examples in this document will use the following format:
 OSC Arguments will be specified in one of the following formats:
 
 \<OSC Argument Type: Description>
+
 \<OSC Argument Type: Example>
 
 ## OSC UUID:
