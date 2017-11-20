@@ -10,6 +10,7 @@ All examples in this document will use the following format:
 \<OSC Address Pattern> = <OSC Argument 1>, <OSC Argument 2>, <OSC Argument 3> (etc…)
 
 OSC Arguments will be specified in one of the following formats:
+
 \<OSC Argument Type: Description>
 \<OSC Argument Type: Example>
 
