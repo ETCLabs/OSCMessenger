@@ -20,7 +20,7 @@ OSC Arguments will be specified in one of the following formats:
 
 UUID’s uniquely identify each messenger client and message, and should be preserved within each client’s database. This allows you to uniquely identify who the message is coming from as well as which message you are referring to.
 
-UID’s will be specified as strings in the following format:
+UUID’s will be specified as strings in the following format:
 XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 Ex:
