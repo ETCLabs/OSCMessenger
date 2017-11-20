@@ -7,6 +7,7 @@ This document describe the integration methods of OSCMessenger via the Open Soun
 The method for transmitting and receiving OSC packets is over UDP via the multicast IP address 239.254.0.1 on Port 3090.
 
 All examples in this document will use the following format:
+
 \<OSC Address Pattern> = <OSC Argument 1>, <OSC Argument 2>, <OSC Argument 3> (etc…)
 
 OSC Arguments will be specified in one of the following formats:
