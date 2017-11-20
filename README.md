@@ -2,7 +2,7 @@
 
 The purpose of OSCMessenger is to create a manufacturer/developer agnostic chat room that will allow users to communicate between devices and applications within an IP network.
 
-This document describe the integration methods of OSCMessenger via the Open Sound Control protocol (OSC).
+This document describes the integration methods of OSCMessenger via the Open Sound Control protocol (OSC).
 
 The method for transmitting and receiving OSC packets is over UDP via the multicast IP address 239.254.0.1 on Port 3090.
 
