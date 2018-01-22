@@ -63,7 +63,7 @@ Sending a message outside of a room:
 - /messenger/me/say = <string: message OSC UID> <string: client OSC UID>, <string: message>
 
 Send a message within a room:
-- /messenger/me/room/<room name>/say = <string: message OSC UID> <string: client OSC UID>, <string: message>
+- /messenger/me/room/<string: room name>/say = <string: message OSC UID> <string: client OSC UID>, <string: message>
 
 
 ## Integrating Your App: Step 4 – Farewell:
